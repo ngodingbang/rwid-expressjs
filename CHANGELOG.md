@@ -2,7 +2,12 @@
 
 All notable changes to `RWID Express.js` will be documented in this file.
 
-## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.0.1...develop)
+## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
+
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2023-12-09
+
+- feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
+- chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
