@@ -1,6 +1,6 @@
 {
   "name": "rwid-expressjs",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "description": "Learn to build an Node.js backend application using Express.js.",
   "private": true,
