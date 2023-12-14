@@ -41,7 +41,10 @@
     "Node.js",
     "Express.js"
   ],
-  "author": "Septianata Rizky Pratama",
+  "author": {
+    "name": "Septianata Rizky Pratama",
+    "email": "ian.rizkypratama@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ngodingbang/rwid-expressjs/issues"
