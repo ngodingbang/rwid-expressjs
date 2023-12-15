@@ -1,5 +1,7 @@
 # RWID Express.js
 
+[![Build Status][build-status-image]][build-status-url]
+[![Coverage Status][coverage-status-image]][coverage-status-url]
 [![License][license-image]][license-url]
 
 Learn to build a Node.js backend application using Express.js.
@@ -21,6 +23,7 @@ Learn to build a Node.js backend application using Express.js.
 ## Requirement
 
 - Node.js ^18.17.0
+- MySQL ^8.2.0
 
 ## Instalation
 
@@ -80,6 +83,10 @@ The MIT License (MIT). Please see [License File][license-url] for more informati
 | ------ | -------------------------------------------------------- |
 | Author | [Septianata Rizky Pratama](https://github.com/ianriizky) |
 
+[build-status-image]: https://github.com/ngodingbang/rwid-expressjs/actions/workflows/nodejs-ci.yml/badge.svg
+[build-status-url]: https://github.com/ngodingbang/rwid-expressjs/actions/workflows/nodejs-ci.yml
+[coverage-status-image]: https://codecov.io/gh/ngodingbang/rwid-expressjs/branch/main/graph/badge.svg
+[coverage-status-url]: https://codecov.io/gh/ngodingbang/rwid-expressjs
 [license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license-url]: LICENSE.md
 [prisma-migrate-documentation-url]: https://www.prisma.io/docs/orm/prisma-migrate
