@@ -87,6 +87,6 @@ The MIT License (MIT). Please see [License File][license-url] for more informati
 [build-status-url]: https://github.com/ngodingbang/rwid-expressjs/actions/workflows/nodejs-ci.yml
 [coverage-status-image]: https://codecov.io/gh/ngodingbang/rwid-expressjs/branch/main/graph/badge.svg
 [coverage-status-url]: https://codecov.io/gh/ngodingbang/rwid-expressjs
-[license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-image]: https://badgen.net/github/license/ngodingbang/rwid-expressjs
 [license-url]: LICENSE.md
 [prisma-migrate-documentation-url]: https://www.prisma.io/docs/orm/prisma-migrate
