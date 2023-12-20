@@ -1,4 +1,4 @@
-import { UserRepository } from "../app/repositories/UserRepository.js";
+import { UserRepository } from "../../../app/repositories/UserRepository.js";
 import { Router } from "express";
 
 const router = Router();

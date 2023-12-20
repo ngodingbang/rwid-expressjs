@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "9743c2f8-e311-41d3-947a-f83a756a1e87",
-		"name": "rwid-express",
+		"name": "rwid-expressjs",
 		"description": "# RWID Express.js\n\nLearn to build a Node.js backend application using Express.js.\n\n## GitHub Repository\n\nhttps://github.com/ngodingbang/rwid-expressjs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3383015"
@@ -59,7 +59,7 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/vnd.api+json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
@@ -71,7 +71,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 08 Dec 2023 13:30:39 GMT"
+									"value": "Wed, 20 Dec 2023 07:48:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -142,7 +142,7 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/vnd.api+json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
@@ -150,11 +150,11 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"17-WWXvNKqPyQGB5X4RmQNakZiuPPc\""
+									"value": "W/\"17-CxnI+3dz/3TUlzZsQY/JdApp+as\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 08 Dec 2023 13:30:12 GMT"
+									"value": "Wed, 20 Dec 2023 07:48:30 GMT"
 								},
 								{
 									"key": "Connection",
@@ -166,7 +166,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"app-version\": \"1.0.0\"\n}"
+							"body": "{\n    \"app-version\": \"1.1.0\"\n}"
 						}
 					]
 				}
@@ -230,19 +230,19 @@
 								},
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/vnd.api+json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "11"
+									"value": "229"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"b-EFAlOux7Kcr/ZEgGkn2r+oFAbu4\""
+									"value": "W/\"e5-J6QZU/aOkC/WS98ZhkjnaR7qr1M\""
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 08 Dec 2023 13:32:10 GMT"
+									"value": "Wed, 20 Dec 2023 07:48:50 GMT"
 								},
 								{
 									"key": "Connection",
@@ -254,20 +254,31 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"data\": []\n}"
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"28ee16c0-2f69-450d-aaf0-7f0dbba8da31\",\n            \"username\": \"ianrizky\",\n            \"email\": \"ian.rizkypratama@gmail.com\",\n            \"name\": \"Septianata Rizky Pratama\",\n            \"created_at\": \"2023-12-14T14:58:02.734Z\",\n            \"updated_at\": \"2023-12-14T14:58:02.734Z\"\n        }\n    ]\n}"
 						}
 					]
 				}
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add({ key: 'Accept', value: 'application/vnd.api+json' });",
+					"pm.request.headers.add({ key: 'Content-Type', value: 'application/vnd.api+json' });"
 				]
 			}
 		},
@@ -283,15 +294,15 @@
 	],
 	"variable": [
 		{
-			"key": "base_url",
-			"value": "http://localhost:3000",
-			"type": "string"
-		},
-		{
 			"key": "version",
 			"value": "1.1.0",
 			"type": "string",
 			"disabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/v1",
+			"type": "string"
 		}
 	]
 }

@@ -19,3 +19,21 @@ export function asyncHandler(fn) {
     return Promise.resolve(fn(...args)).catch(next);
   };
 }
+
+/**
+ * Create a middleware to modify "Content-Type" of response header.
+ *
+ * @param {string} value
+ */
+export function setContentType(value) {
+  /**
+   * @param {import("express").Request} req
+   * @param {import("express").Response} res
+   * @param {import("express").NextFunction} next
+   */
+  return (req, res, next) => {
+    res.contentType(value);
+
+    return next();
+  };
+}
