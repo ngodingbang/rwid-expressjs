@@ -1,29 +1,14 @@
-import {
-  errorHandler,
-  notFoundErrorHandler,
-} from "./app/exceptions/handler.js";
-import router from "./routes/index.js";
-import cookieParser from "cookie-parser";
+import { Handler as ErrorHandler } from "./app/exceptions/Handler.js";
+import { Handler as HttpHandler } from "./app/http/Handler.js";
+import { ServiceProvider } from "./app/providers/ServiceProvider.js";
+import { Router } from "./routes/Router.js";
 import express from "express";
-import logger from "morgan";
 
 const app = express();
 
-/**
- * View engine setup.
- */
-app.set("views", "views");
-app.set("view engine", "jade");
-
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static("public"));
-
-app.use(router);
-
-app.use(notFoundErrorHandler);
-app.use(errorHandler);
+new ServiceProvider(app).boot();
+new HttpHandler(app);
+new Router(app);
+new ErrorHandler(app);
 
 export default app;

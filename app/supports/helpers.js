@@ -1,3 +1,4 @@
+import Encrypter from "./Encrypter.js";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
 
@@ -36,4 +37,13 @@ export function setContentType(value) {
 
     return next();
   };
+}
+
+/**
+ * Return a generated key from the encrypter.
+ *
+ * @param {import("./Encrypter.js").CipherType} cipher
+ */
+export function generateKey(cipher) {
+  return Buffer.from(Encrypter.generateKey(cipher)).toString("base64");
 }

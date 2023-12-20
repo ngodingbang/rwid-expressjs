@@ -1,3 +1,5 @@
+import config from "../../../../../config/app.js";
+
 export class HomeController {
   /**
    * @param {import("express").Request} req
@@ -17,7 +19,7 @@ export class HomeController {
   // eslint-disable-next-line no-unused-vars
   static async appVersion(req, res) {
     return res.json({
-      ["app-version"]: process.env.npm_package_version,
+      ["app-version"]: config.version,
     });
   }
 }

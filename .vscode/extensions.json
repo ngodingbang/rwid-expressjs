@@ -7,8 +7,10 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "github.vscode-pull-request-github",
+    "guapibai.nunjucks-prettier",
     "Orta.vscode-jest",
     "Prisma.prisma",
-    "rohit-gohri.format-code-action"
+    "rohit-gohri.format-code-action",
+    "ronnidc.nunjucks"
   ]
 }

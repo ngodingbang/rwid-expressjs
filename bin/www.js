@@ -1,7 +1,8 @@
-import debug from "debug";
-import { createServer } from "http";
 import app from "../app.js";
 import { loadEnv } from "../app/supports/helpers.js";
+import config from "../config/app.js";
+import debug from "debug";
+import { createServer } from "http";
 
 loadEnv();
 
@@ -16,7 +17,7 @@ function generatePort(value) {
   return isNaN(port) ? value : port >= 0 ? port : false;
 }
 
-const port = generatePort(process.env.PORT || "3000");
+const port = generatePort(config.port);
 
 /**
  * Get port from environment and store in Express.

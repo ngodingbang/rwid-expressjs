@@ -1,3 +1,4 @@
+import config from "../../config/hashing.js";
 import { loadEnv } from "./helpers.js";
 import bcrypt from "bcrypt";
 
@@ -16,6 +17,6 @@ export class Hash {
    * @param {string | Buffer} value
    */
   static make(value) {
-    return bcrypt.hash(value, Number(process.env.BCRYPT_ROUNDS || "10"));
+    return bcrypt.hash(value, config.bcrypt_rounds);
   }
 }

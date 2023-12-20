@@ -32,6 +32,7 @@ You can install the project by clone it via GitHub :
 ```bash
 git clone https://github.com/ngodingbang/rwid-expressjs.git
 npm install
+npm run key:generate # Generate a new APP_KEY and put it into .env file (use flag "-- --show" to only display the key into the terminal).
 ```
 
 ## Preparing The Database
