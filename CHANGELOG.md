@@ -4,12 +4,13 @@ All notable changes to `RWID Express.js` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
 
-## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2023-12-20
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2023-12-21
 
 - feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
 - chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
 - feat: merge pull request from ngodingbang/feature/github-actions by [@ngodingbang](https://github.com/ngodingbang) in [#1](https://github.com/ngodingbang/rwid-expressjs/pull/1).
 - chore: set default content-type response header into "application/vnd.api+json" by [@ngodingbang](https://github.com/ngodingbang) in [#3b95158](https://github.com/ngodingbang/rwid-expressjs/commit/3b951580267e93a0763f9281b8a902e9aba0cae2).
+- feat: setup boilerplate framework by [@ngodingbang](https://github.com/ngodingbang) in [#16d4abb](https://github.com/ngodingbang/rwid-expressjs/commit/16d4abb14e8f9dc46f1d0a7391165416bdb1bd19).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
