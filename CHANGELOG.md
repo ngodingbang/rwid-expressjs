@@ -11,6 +11,8 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - feat: merge pull request from ngodingbang/feature/github-actions by [@ngodingbang](https://github.com/ngodingbang) in [#1](https://github.com/ngodingbang/rwid-expressjs/pull/1).
 - chore: set default content-type response header into "application/vnd.api+json" by [@ngodingbang](https://github.com/ngodingbang) in [#3b95158](https://github.com/ngodingbang/rwid-expressjs/commit/3b951580267e93a0763f9281b8a902e9aba0cae2).
 - feat: setup boilerplate framework by [@ngodingbang](https://github.com/ngodingbang) in [#16d4abb](https://github.com/ngodingbang/rwid-expressjs/commit/16d4abb14e8f9dc46f1d0a7391165416bdb1bd19).
+- chore: add unit test for encrypter support class by [@ngodingbang](https://github.com/ngodingbang) in [#24285bb](https://github.com/ngodingbang/rwid-expressjs/commit/24285bb928327ee950fce7ee2cca343e94a4dd1d).
+- chore: update ignore list of eslint and prettier by [@ngodingbang](https://github.com/ngodingbang) in [#9c9dea7](https://github.com/ngodingbang/rwid-expressjs/commit/9c9dea732bb238e6ed0eadb7ed3713383f0f3a66).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
