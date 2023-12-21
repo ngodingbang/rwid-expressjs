@@ -5,8 +5,19 @@ export class Handler {
    * @param {import("express").Express} app
    */
   constructor(app) {
-    app.use(this.notFoundErrorHandler);
+    app.use(this.notFoundErrorHandler());
     app.use(this.errorHandler);
+  }
+
+  notFoundErrorHandler() {
+    /**
+     * Catch 404 and forward to error handler.
+     *
+     * @param {import("express").Request} req
+     * @param {import("express").Response} res
+     * @param {import("express").NextFunction} next
+     */
+    return (req, res, next) => next(new NotFoundException());
   }
 
   /**
@@ -21,16 +32,5 @@ export class Handler {
     res.locals.error = req.app.get("env") === "development" ? err : {};
 
     return res.status(err.status || 500).render("error");
-  }
-
-  /**
-   * Catch 404 and forward to error handler.
-   *
-   * @param {import("express").Request} req
-   * @param {import("express").Response} res
-   * @param {import("express").NextFunction} next
-   */
-  notFoundErrorHandler(req, res, next) {
-    return next(new NotFoundException());
   }
 }
