@@ -8,6 +8,6 @@ export class NotFoundException extends Exception {
   constructor(message) {
     super(message || ReasonPhrases.NOT_FOUND);
 
-    this.status = StatusCodes.NOT_FOUND;
+    this.setStatus(StatusCodes.NOT_FOUND);
   }
 }

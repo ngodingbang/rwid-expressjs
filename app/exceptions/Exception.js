@@ -2,6 +2,9 @@ import escapeHTML from "escape-html";
 import { ReasonPhrases, StatusCodes } from "http-status-codes";
 
 export class Exception extends Error {
+  /** @type {StatusCodes} */
+  statusCode;
+
   /**
    * @param {string} message
    */
