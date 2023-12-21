@@ -1,4 +1,4 @@
-import Encrypter from "./Encrypter.js";
+import { Encrypter } from "./Encrypter.js";
 import { config } from "dotenv";
 import { expand } from "dotenv-expand";
 
