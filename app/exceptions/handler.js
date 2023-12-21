@@ -1,3 +1,4 @@
+import createError from "http-errors";
 import { NotFoundException } from "./NotFoundException.js";
 
 export class Handler {
@@ -5,19 +6,19 @@ export class Handler {
    * @param {import("express").Express} app
    */
   constructor(app) {
-    app.use(this.notFoundErrorHandler());
+    app.use(this.notFoundErrorHandler);
     app.use(this.errorHandler);
   }
 
-  notFoundErrorHandler() {
-    /**
-     * Catch 404 and forward to error handler.
-     *
-     * @param {import("express").Request} req
-     * @param {import("express").Response} res
-     * @param {import("express").NextFunction} next
-     */
-    return (req, res, next) => next(new NotFoundException());
+  /**
+   * Catch 404 and forward to error handler.
+   *
+   * @param {import("express").Request} req
+   * @param {import("express").Response} res
+   * @param {import("express").NextFunction} next
+   */
+  notFoundErrorHandler(req, res, next) {
+    return next(createError(404));
   }
 
   /**
