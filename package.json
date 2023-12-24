@@ -65,7 +65,6 @@
     "hash-equals": "^0.0.5",
     "http-errors": "~1.6.3",
     "http-status-codes": "^2.2.0",
-    "jade": "~1.11.0",
     "jsonwebtoken": "^9.0.2",
     "minimist": "^1.2.8",
     "morgan": "~1.9.1",
