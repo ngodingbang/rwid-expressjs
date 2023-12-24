@@ -1,22 +1,35 @@
 import { model, prisma } from "../../app/models/index.js";
+import { UserRepository } from "../../app/repositories/UserRepository.js";
 import { Hash } from "../../app/supports/Hash.js";
+import { faker } from "@faker-js/faker";
 
 try {
-  await model.user.upsert({
-    where: { username: "ianrizky" },
-    update: {},
-    create: {
-      username: "ianrizky",
-      email: "ian.rizkypratama@gmail.com",
-      name: "Septianata Rizky Pratama",
-      auths: {
-        create: {
-          provider: prisma.AuthProvider.local,
-          password: await Hash.make("12345"),
+  await UserRepository.model.deleteMany({});
+
+  for (let index = 0; index < 100; index++) {
+    const gender = faker.helpers.arrayElement(["male", "female"]);
+    const person = {
+      firstName: faker.person.firstName(gender),
+      lastName: faker.person.lastName(gender),
+    };
+    const username = faker.internet.userName(person);
+
+    await UserRepository.model.create({
+      data: {
+        username,
+        email: faker.internet.email(person),
+        name: faker.person.fullName({ ...person, gender }),
+        auths: {
+          create: {
+            provider: faker.helpers.arrayElement(
+              Object.keys(prisma.AuthProvider),
+            ),
+            password: await Hash.make("12345"),
+          },
         },
       },
-    },
-  });
+    });
+  }
 } catch (error) {
   console.error(error);
 
