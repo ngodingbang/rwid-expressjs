@@ -11,11 +11,14 @@ export class Exception extends Error {
   constructor(message) {
     super(message || ReasonPhrases.INTERNAL_SERVER_ERROR);
 
-    this.setStatus(StatusCodes.INTERNAL_SERVER_ERROR);
+    this.setStatusCode(StatusCodes.INTERNAL_SERVER_ERROR);
   }
 
-  setStatus(status) {
-    this.statusCode = status || StatusCodes.INTERNAL_SERVER_ERROR;
+  /**
+   * @param {StatusCodes} statusCode
+   */
+  setStatusCode(statusCode) {
+    this.statusCode = statusCode;
 
     return this;
   }

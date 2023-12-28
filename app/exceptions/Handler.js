@@ -1,4 +1,7 @@
+import { winstonLogger } from "../http/middleware/logger.js";
 import { NotFoundException } from "./NotFoundException.js";
+import ErrorStackParser from "error-stack-parser";
+import { StatusCodes } from "http-status-codes";
 
 export class Handler {
   /**
@@ -30,9 +33,22 @@ export class Handler {
    */
   // eslint-disable-next-line no-unused-vars
   errorHandler(err, req, res, next) {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get("env") === "development" ? err : {};
+    const isDevelopment = req.app.get("env") === "development";
 
-    return res.status(err.status || 500).render("error");
+    res.locals.message = err.message;
+    res.locals.error = isDevelopment ? err : {};
+
+    winstonLogger.error(err.stack);
+
+    const code =
+      err?.statusCode || err?.status || StatusCodes.INTERNAL_SERVER_ERROR;
+
+    return res.status(code).json({
+      errors: {
+        code,
+        message: err.message,
+      },
+      traces: isDevelopment ? ErrorStackParser.parse(err) : undefined,
+    });
   }
 }

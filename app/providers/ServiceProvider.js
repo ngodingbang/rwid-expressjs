@@ -5,11 +5,13 @@ export class ServiceProvider {
    * @param {import("express").Express} app
    */
   constructor(app) {
-    /** @type {import("express").Express} */
-    this.app = app;
+    this.boot(app);
   }
 
-  boot() {
-    new ViewServiceProvider(this.app).boot();
+  /**
+   * @param {import("express").Express} app
+   */
+  boot(app) {
+    new ViewServiceProvider(app).boot();
   }
 }

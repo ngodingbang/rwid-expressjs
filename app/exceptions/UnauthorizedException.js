@@ -8,6 +8,6 @@ export class UnauthorizedException extends Exception {
   constructor(message) {
     super(message || ReasonPhrases.UNAUTHORIZED);
 
-    this.setStatus(StatusCodes.UNAUTHORIZED);
+    this.setStatusCode(StatusCodes.UNAUTHORIZED);
   }
 }
