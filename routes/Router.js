@@ -1,3 +1,4 @@
+import { setContentType } from "../app/supports/helpers.js";
 import api from "./api/index.js";
 import express from "express";
 
@@ -12,7 +13,13 @@ export class Router {
   generateRouter() {
     const router = express.Router();
 
-    router.use(api);
+    router.use(
+      setContentType("application/vnd.api+json"),
+      express.json({
+        type: "application/vnd.api+json",
+      }),
+      api,
+    );
 
     return router;
   }

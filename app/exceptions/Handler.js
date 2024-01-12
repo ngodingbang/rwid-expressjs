@@ -40,6 +40,7 @@ export class Handler {
 
     winstonLogger.error(err.stack);
 
+    /** @type {import("http-status-codes").StatusCodes} */
     const code =
       err?.statusCode || err?.status || StatusCodes.INTERNAL_SERVER_ERROR;
 
