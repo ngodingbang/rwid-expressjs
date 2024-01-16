@@ -2,7 +2,7 @@ import { winstonLogger } from "../http/middleware/logger.js";
 import { JoiValidationException } from "./JoiValidationException.js";
 import { NotFoundException } from "./NotFoundException.js";
 import ErrorStackParser from "error-stack-parser";
-import { StatusCodes } from "http-status-codes";
+import { getReasonPhrase, StatusCodes } from "http-status-codes";
 import Joi from "joi";
 
 export class Handler {
@@ -57,12 +57,19 @@ export class Handler {
         .send(err?.render ? err?.render() : err.message);
     }
 
-    return res.status(status).json({
-      errors: {
-        status,
-        message: err.message,
+    return res.status(status).formattedJson({
+      metadata: {
+        errors: [
+          {
+            status,
+            message:
+              isDevelopment || status < 500
+                ? err.message
+                : getReasonPhrase(status),
+          },
+        ],
+        traces: isDevelopment ? ErrorStackParser.parse(err) : undefined,
       },
-      traces: isDevelopment ? ErrorStackParser.parse(err) : undefined,
     });
   }
 }

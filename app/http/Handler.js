@@ -1,5 +1,6 @@
 import config from "../../config/app.js";
 import loggerMiddleware from "./middleware/logger.js";
+import responseMacroMiddleware from "./middleware/response-macro.js";
 import cookieParser from "cookie-parser";
 import express from "express";
 
@@ -30,5 +31,6 @@ export class Handler {
    */
   bootMiddlewareHandler(app) {
     app.use(loggerMiddleware);
+    app.use(responseMacroMiddleware);
   }
 }
