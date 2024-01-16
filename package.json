@@ -26,7 +26,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test-coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "p2o": "npx p2o postman_collection.json -f openapi.yml",
-    "redoc:build": "npx @redocly/cli build-docs openapi.yml --output=resources/views/api-doc.html",
+    "redoc:build": "npx @redocly/cli build-docs openapi.yml --output=public/api-doc.html",
     "api-doc": "npm run p2o && npm run redoc:build",
     "key:generate": "node app/console/commands/key-generate.js",
     "requirements-check": "npx node-check-version",

@@ -13,6 +13,8 @@ export class Router {
   generateRouter() {
     const router = express.Router();
 
+    router.use(express.static("public"));
+
     router.use(
       setContentType("application/vnd.api+json"),
       express.json({
