@@ -1,3 +1,4 @@
+import { AppServiceProvider } from "./AppServiceProvider.js";
 import { ViewServiceProvider } from "./ViewServiceProvider.js";
 
 export class ServiceProvider {
@@ -10,6 +11,7 @@ export class ServiceProvider {
   }
 
   boot() {
+    new AppServiceProvider(this.app).boot();
     new ViewServiceProvider(this.app).boot();
   }
 }
