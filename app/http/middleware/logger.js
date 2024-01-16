@@ -9,8 +9,8 @@ export const winstonLogger = createLogger({
       format.colorize(),
       format.timestamp({ format: "YYYY-MM-DD HH:mm:ss.SSS" }),
       format.printf(
-        info => `[${info.timestamp}] ${info.level}: ${info.message}`
-      )
+        info => `[${info.timestamp}] ${info.level}: ${info.message}`,
+      ),
     ),
   }),
 });
@@ -22,5 +22,5 @@ export default morgan(
     stream: {
       write: message => winstonLogger.http(message.trim()),
     },
-  }
+  },
 );
