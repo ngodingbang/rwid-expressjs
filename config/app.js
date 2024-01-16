@@ -2,16 +2,19 @@ import { loadEnv } from "../app/supports/helpers.js";
 
 loadEnv();
 
-const port = process.env.APP_PORT || "3000";
+const port = Number(process.env.PORT || "3000");
+const url = process.env.APP_URL || "http://localhost";
 /** @type {"production" | "development" | "testing"} */
 const node_env = process.env.NODE_ENV;
 
 export default {
   port,
   timezone: process.env.TZ || "Asia/Jakarta",
-  url: process.env.URL || `http://localhost:${port}`,
-  name: process.env.APP_NAME || "RWID Express.js",
+  url,
+  url_port: `${url}${[80, 443].includes(port) ? "" : `:${port}`}`,
+  name: process.env.APP_NAME || "Invitation Web Page",
   key: process.env.APP_KEY,
+  csrf_key: process.env.CSRF_KEY,
   /** @type {import("../app/supports/Encrypter.js").CipherType} */
   cipher: "aes-256-cbc",
   version: process.env.npm_package_version,
