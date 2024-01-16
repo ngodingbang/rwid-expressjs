@@ -8,7 +8,7 @@ const node_env = process.env.NODE_ENV;
 
 export default {
   port,
-  timezone: process.env.TIMEZONE || "Asia/Jakarta",
+  timezone: process.env.TZ || "Asia/Jakarta",
   url: process.env.URL || `http://localhost:${port}`,
   name: process.env.APP_NAME || "RWID Express.js",
   key: process.env.APP_KEY,
