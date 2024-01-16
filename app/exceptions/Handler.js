@@ -1,7 +1,9 @@
 import { winstonLogger } from "../http/middleware/logger.js";
+import { JoiValidationException } from "./JoiValidationException.js";
 import { NotFoundException } from "./NotFoundException.js";
 import ErrorStackParser from "error-stack-parser";
 import { StatusCodes } from "http-status-codes";
+import Joi from "joi";
 
 export class Handler {
   /**
@@ -35,18 +37,29 @@ export class Handler {
   errorHandler(err, req, res, next) {
     const isDevelopment = req.app.get("env") === "development";
 
+    if (Joi.isError(err?.error)) {
+      err = new JoiValidationException(err);
+    }
+
     res.locals.message = err.message;
     res.locals.error = isDevelopment ? err : {};
 
     winstonLogger.error(err.stack);
 
     /** @type {import("http-status-codes").StatusCodes} */
-    const code =
+    const status =
       err?.statusCode || err?.status || StatusCodes.INTERNAL_SERVER_ERROR;
 
-    return res.status(code).json({
+    if (res.headersSent || !["application/json"].includes(req.headers.accept)) {
+      return res
+        .status(status)
+        .header("content-type", "text/html")
+        .send(err?.render ? err?.render() : err.message);
+    }
+
+    return res.status(status).json({
       errors: {
-        code,
+        status,
         message: err.message,
       },
       traces: isDevelopment ? ErrorStackParser.parse(err) : undefined,
