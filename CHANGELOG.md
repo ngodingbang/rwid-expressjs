@@ -4,7 +4,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
 
-## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-16
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-19
 
 - feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
 - chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
@@ -22,6 +22,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - feat: creat csrf token middleware by [@ngodingbang](https://github.com/ngodingbang) in [#c27505c](https://github.com/ngodingbang/rwid-expressjs/commit/c27505c37c0985ef11a7cb90bfd961635e19a095).
 - feat: create AppServiceProvider class by [@ngodingbang](https://github.com/ngodingbang) in [#c27505c](https://github.com/ngodingbang/rwid-expressjs/commit/8967291cbd8e89b2a24c493d363ea505f9ce254b).
 - feat: create routes for static files in public folder by [@ngodingbang](https://github.com/ngodingbang) in [#435a625](https://github.com/ngodingbang/rwid-expressjs/commit/435a625a532374723b98ab53990401139670a0bd).
+- chore: create dateToUnixTimestamp() on helpers by [@ngodingbang](https://github.com/ngodingbang) in [#34bf78b](https://github.com/ngodingbang/rwid-expressjs/commit/34bf78bf9e10578931f1253d465c1fe079354ba5).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
