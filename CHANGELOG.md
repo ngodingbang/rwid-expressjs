@@ -23,6 +23,8 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - feat: create AppServiceProvider class by [@ngodingbang](https://github.com/ngodingbang) in [#c27505c](https://github.com/ngodingbang/rwid-expressjs/commit/8967291cbd8e89b2a24c493d363ea505f9ce254b).
 - feat: create routes for static files in public folder by [@ngodingbang](https://github.com/ngodingbang) in [#435a625](https://github.com/ngodingbang/rwid-expressjs/commit/435a625a532374723b98ab53990401139670a0bd).
 - chore: create dateToUnixTimestamp() on helpers by [@ngodingbang](https://github.com/ngodingbang) in [#34bf78b](https://github.com/ngodingbang/rwid-expressjs/commit/34bf78bf9e10578931f1253d465c1fe079354ba5).
+- chore: create Str support class by [@ngodingbang](https://github.com/ngodingbang) in [#cb4a1ac](https://github.com/ngodingbang/rwid-expressjs/commit/cb4a1ac643e60d0920e2b4f125e180187bd75c57).
+- feat: add CSRF_KEY on key generate console command by [@ngodingbang](https://github.com/ngodingbang) in [#67d47b1](https://github.com/ngodingbang/rwid-expressjs/commit/67d47b196067954516c3b3f0a6bbb85da8897a88).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
