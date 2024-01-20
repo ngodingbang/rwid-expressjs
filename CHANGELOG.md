@@ -4,7 +4,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
 
-## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-20
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-22
 
 - feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
 - chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
@@ -28,6 +28,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - refactor: move api-doc.html by [@ngodingbang](https://github.com/ngodingbang) in [#bc9a89b](https://github.com/ngodingbang/rwid-expressjs/commit/bc9a89b02961839a0fa2caf0b282f0d6dfbe9cbc).
 - feat: create unit test for Str class by [@ngodingbang](https://github.com/ngodingbang) in [#c310e03](https://github.com/ngodingbang/rwid-expressjs/commit/c310e03f363ff78798e7e37cd217ee39ddf744e4).
 - refactor: remove unnecessary views template by [@ngodingbang](https://github.com/ngodingbang) in [#0ab4241](https://github.com/ngodingbang/rwid-expressjs/commit/0ab4241e73d1fc6ae1760e0ac81d6f7750cdfe5b).
+- fix: create missing Validator http class file by [@ngodingbang](https://github.com/ngodingbang) in [#935f7a6](https://github.com/ngodingbang/rwid-expressjs/commit/935f7a6492a7cef56bc0f989e0754e6897712647).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
