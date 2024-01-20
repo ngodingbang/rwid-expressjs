@@ -47,3 +47,10 @@ export function setContentType(value) {
 export function generateKey(cipher) {
   return Buffer.from(Encrypter.generateKey(cipher)).toString("base64");
 }
+
+/**
+ * @param {Date} date
+ */
+export function dateToUnixTimestamp(date) {
+  return Math.floor(date.getTime() / 1000);
+}
