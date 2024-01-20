@@ -4,7 +4,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
 
-## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-19
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-01-20
 
 - feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
 - chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
@@ -25,6 +25,8 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - chore: create dateToUnixTimestamp() on helpers by [@ngodingbang](https://github.com/ngodingbang) in [#34bf78b](https://github.com/ngodingbang/rwid-expressjs/commit/34bf78bf9e10578931f1253d465c1fe079354ba5).
 - chore: create Str support class by [@ngodingbang](https://github.com/ngodingbang) in [#cb4a1ac](https://github.com/ngodingbang/rwid-expressjs/commit/cb4a1ac643e60d0920e2b4f125e180187bd75c57).
 - feat: add CSRF_KEY on key generate console command by [@ngodingbang](https://github.com/ngodingbang) in [#67d47b1](https://github.com/ngodingbang/rwid-expressjs/commit/67d47b196067954516c3b3f0a6bbb85da8897a88).
+- refactor: move api-doc.html by [@ngodingbang](https://github.com/ngodingbang) in [#bc9a89b](https://github.com/ngodingbang/rwid-expressjs/commit/bc9a89b02961839a0fa2caf0b282f0d6dfbe9cbc).
+- feat: create unit test for Str class by [@ngodingbang](https://github.com/ngodingbang) in [#c310e03](https://github.com/ngodingbang/rwid-expressjs/commit/c310e03f363ff78798e7e37cd217ee39ddf744e4).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
