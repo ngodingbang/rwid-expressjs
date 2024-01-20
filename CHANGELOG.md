@@ -27,6 +27,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - feat: add CSRF_KEY on key generate console command by [@ngodingbang](https://github.com/ngodingbang) in [#67d47b1](https://github.com/ngodingbang/rwid-expressjs/commit/67d47b196067954516c3b3f0a6bbb85da8897a88).
 - refactor: move api-doc.html by [@ngodingbang](https://github.com/ngodingbang) in [#bc9a89b](https://github.com/ngodingbang/rwid-expressjs/commit/bc9a89b02961839a0fa2caf0b282f0d6dfbe9cbc).
 - feat: create unit test for Str class by [@ngodingbang](https://github.com/ngodingbang) in [#c310e03](https://github.com/ngodingbang/rwid-expressjs/commit/c310e03f363ff78798e7e37cd217ee39ddf744e4).
+- refactor: remove unnecessary views template by [@ngodingbang](https://github.com/ngodingbang) in [#0ab4241](https://github.com/ngodingbang/rwid-expressjs/commit/0ab4241e73d1fc6ae1760e0ac81d6f7750cdfe5b).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
