@@ -1,13 +1,14 @@
 import config from "../../../../../config/app.js";
+import { Controller } from "../../Controller.js";
 
-export class HomeController {
+export class HomeController extends Controller {
   /**
    * @param {import("express").Request} req
    * @param {import("express").Response} res
    * @param {import("express").NextFunction} next
    */
   // eslint-disable-next-line no-unused-vars
-  static async index(req, res, next) {
+  async index(req, res, next) {
     return res.json({ message: "Express" });
   }
 
@@ -17,7 +18,7 @@ export class HomeController {
    * @param {import("express").NextFunction} next
    */
   // eslint-disable-next-line no-unused-vars
-  static async appVersion(req, res) {
+  async appVersion(req, res) {
     return res.json({
       ["app-version"]: config.version,
     });

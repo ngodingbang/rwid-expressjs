@@ -4,7 +4,7 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/", asyncHandler(HomeController.index));
-router.get("/app-version", asyncHandler(HomeController.appVersion));
+router.get("/", asyncHandler(new HomeController().index));
+router.get("/app-version", asyncHandler(new HomeController().appVersion));
 
 export default router;
