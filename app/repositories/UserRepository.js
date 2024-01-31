@@ -3,6 +3,7 @@ import { Pagination } from "../supports/Pagination.js";
 import _ from "lodash";
 
 /**
+ * @typedef {import("../models/index.js").prisma.PrismaClient} PrismaClient
  * @typedef {import("../models/index.js").prisma.User} User
  * @typedef {import("../models/index.js").prisma.Prisma.UserDelegate} Model
  */
@@ -11,10 +12,10 @@ export class UserRepository {
   model;
 
   /**
-   * @param {Model} [model]
+   * @param {PrismaClient} [prisma]
    */
-  constructor(model) {
-    this.model = model || defaultModel.user;
+  constructor(prisma) {
+    this.model = (prisma || defaultModel).user;
   }
 
   /**
