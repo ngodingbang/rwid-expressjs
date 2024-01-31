@@ -31,6 +31,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - fix: create missing Validator http class file by [@ngodingbang](https://github.com/ngodingbang) in [#935f7a6](https://github.com/ngodingbang/rwid-expressjs/commit/935f7a6492a7cef56bc0f989e0754e6897712647).
 - refactor: create new controller class design by [@ngodingbang](https://github.com/ngodingbang) in [#1d5f96a](https://github.com/ngodingbang/rwid-expressjs/commit/1d5f96a172ee5cc56b7070d4b9531c727a8789e8).
 - fix: omit "select", "include", and "distinct" property when running repository paginate query by [@ngodingbang](https://github.com/ngodingbang) in [#d550698](https://github.com/ngodingbang/rwid-expressjs/commit/d55069823359bd4205014524c75417d8d7f48231).
+- refactor!: redesign model constructor class by [@ngodingbang](https://github.com/ngodingbang) in [#e67ae71](https://github.com/ngodingbang/rwid-expressjs/commit/e67ae710bcc734c4082f184e65b9517692ff5f15).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
