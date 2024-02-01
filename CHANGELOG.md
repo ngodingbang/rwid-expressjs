@@ -32,6 +32,8 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - refactor: create new controller class design by [@ngodingbang](https://github.com/ngodingbang) in [#1d5f96a](https://github.com/ngodingbang/rwid-expressjs/commit/1d5f96a172ee5cc56b7070d4b9531c727a8789e8).
 - fix: omit "select", "include", and "distinct" property when running repository paginate query by [@ngodingbang](https://github.com/ngodingbang) in [#d550698](https://github.com/ngodingbang/rwid-expressjs/commit/d55069823359bd4205014524c75417d8d7f48231).
 - refactor!: redesign model constructor class by [@ngodingbang](https://github.com/ngodingbang) in [#e67ae71](https://github.com/ngodingbang/rwid-expressjs/commit/e67ae710bcc734c4082f184e65b9517692ff5f15).
+- refactor: set error message on Exception handler by [@ngodingbang](https://github.com/ngodingbang) in [#94170b2](https://github.com/ngodingbang/rwid-expressjs/commit/94170b2f14e56c327a555f38ffa8ccaf5be1959d).
+- chore: setup express session and cookie by [@ngodingbang](https://github.com/ngodingbang) in [#dc52fd0](https://github.com/ngodingbang/rwid-expressjs/commit/dc52fd06d91013749797b2b1de722f5245afd66c).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
