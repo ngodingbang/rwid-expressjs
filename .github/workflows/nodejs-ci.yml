@@ -36,6 +36,9 @@ jobs:
     env:
       APP_PORT: 3000
       APP_KEY: base64:3jbOKKmMkBUocKVMj7wKCxKEvsAxvJ3FFfw2uaYFYWc=
+      CSRF_KEY: 1DeFGlgil1pANL43qXQA4y1rTOK49UCV
+      COOKIE_KEY: uKgT5qUMNKs3hqNUdWsvWhuIAGmrbIUk
+      SESSION_KEY: 4dzxrPGQ09BoOt6053KP6qIsOgmhOS5B
       DATABASE_URL: mysql://root@localhost:3306/rwid_expressjs
 
     strategy:
