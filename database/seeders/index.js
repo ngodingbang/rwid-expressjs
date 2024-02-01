@@ -20,7 +20,7 @@ try {
         };
         const username = faker.internet.userName(person);
 
-        return new UserRepository(model.user).model.create({
+        return new UserRepository(model).model.create({
           data: {
             username,
             email: faker.internet.email(person),
