@@ -4,7 +4,7 @@ All notable changes to `RWID Express.js` will be documented in this file.
 
 ## [Unreleased](https://github.com/ngodingbang/rwid-expressjs/compare/1.1.0...develop)
 
-## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-02-01
+## [1.1.0](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.1.0) - 2024-02-16
 
 - feat: create asyncHandler() function to handle async method of controller on routes by [@ngodingbang](https://github.com/ngodingbang) in [#a76632a](https://github.com/ngodingbang/rwid-expressjs/commit/a76632ac45183527176978d2acf5d49554615881).
 - chore: create HomeController to handle home routes by [@ngodingbang](https://github.com/ngodingbang) in [#e711d3b](https://github.com/ngodingbang/rwid-expressjs/commit/e711d3b010d03e32cb3ce9368933a38fdb45fbb3).
@@ -34,6 +34,8 @@ All notable changes to `RWID Express.js` will be documented in this file.
 - refactor!: redesign model constructor class by [@ngodingbang](https://github.com/ngodingbang) in [#e67ae71](https://github.com/ngodingbang/rwid-expressjs/commit/e67ae710bcc734c4082f184e65b9517692ff5f15).
 - refactor: set error message on Exception handler by [@ngodingbang](https://github.com/ngodingbang) in [#94170b2](https://github.com/ngodingbang/rwid-expressjs/commit/94170b2f14e56c327a555f38ffa8ccaf5be1959d).
 - chore: setup express session and cookie by [@ngodingbang](https://github.com/ngodingbang) in [#dc52fd0](https://github.com/ngodingbang/rwid-expressjs/commit/dc52fd06d91013749797b2b1de722f5245afd66c).
+- chore: set default formatter for prisma on vscode settings by [@ngodingbang](https://github.com/ngodingbang) in [#3c38d47](https://github.com/ngodingbang/rwid-expressjs/commit/3c38d4747756a6f60c3eaba9b82ec2855b88ecaa).
+- chore!: remove deprecated jest on vscode settings by [@ngodingbang](https://github.com/ngodingbang) in [#34499d3](https://github.com/ngodingbang/rwid-expressjs/commit/34499d314b402d4ae0c531ef69dc01ff282573e6).
 
 ## [1.0.1](https://github.com/ngodingbang/rwid-expressjs/releases/tag/1.0.1) - 2023-12-09
 
